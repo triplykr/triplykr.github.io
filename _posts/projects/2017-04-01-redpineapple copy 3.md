@@ -1,15 +1,14 @@
 ---
 layout: project
 permalink: /:title/
+categories: [projects, tourist]  # 또는 accommodation, transportation
+location: "Bali, Indonesia"  # 위치 정보 추가
 
 meta:
   keywords: "Jekyll, Pineapple"
 
-categories: [tourist]  # 또는 accommodation, transportation
-
 project:
   title: "Red Pineapple"
-  location: "Bali, Indonesia"  # 위치 정보 추가
   type: "관광지"
   url: "https://github.com/arnolds/pineapple"
   logo: "/assets/images/projects/redpineapple/001.png"

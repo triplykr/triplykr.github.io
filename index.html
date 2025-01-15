@@ -20,10 +20,23 @@
 		</section>
 		<section class="projects">
 			<div class="container">
-				<h2>여행지. Places I Have Visited</h2>
+                <!-- 검색 필드 추가 -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="여행지 검색...">
+                </div>
+                <!-- 필터 네비게이션 추가 -->
+				<div class="filter-nav">
+                    <a href="/" class="filter-item {% if page.category == nil %}active{% endif %}">전체</a>
+					<a href="/category/tourist" class="filter-item {% if page.category == 'tourist' %}active{% endif %}">관광지</a>
+					<a href="/category/accommodation" class="filter-item {% if page.category == 'accommodation' %}active{% endif %}">숙소</a>
+					<a href="/category/transportation" class="filter-item {% if page.category == 'transportation' %}active{% endif %}">교통</a>
+					<a href="/category/food" class="filter-item {% if page.category == 'food' %}active{% endif %}">음식</a>
+				</div>
+                
+                <h2>여행지. Places I Have Visited</h2>
 				<ul class="projects-list">
                     {% for item in paginator.posts %}
-                        <li>
+                        <li data-location="{{ item.location }}" data-title="{{ item.title }}">
                             <a href="{{ item.url | prepend: site.baseurl }}">
                                 <div class="img-wrapper">
                                     <img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
@@ -67,5 +80,6 @@
 	{% include footer.html %}
 	<script src="{{ "/assets/scripts/vendor/scrollreveal.min.js" | prepend: site.baseurl }}"></script>
 	<script src="{{ "/assets/scripts/home.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/scripts/search.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>

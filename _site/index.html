@@ -35,10 +35,23 @@
 		</section>
 		<section class="projects">
 			<div class="container">
-				<h2>여행지. Places I Have Visited</h2>
+                <!-- 검색 필드 추가 -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="여행지 검색...">
+                </div>
+                <!-- 필터 네비게이션 추가 -->
+				<div class="filter-nav">
+                    <a href="/" class="filter-item active">전체</a>
+					<a href="/category/tourist" class="filter-item ">관광지</a>
+					<a href="/category/accommodation" class="filter-item ">숙소</a>
+					<a href="/category/transportation" class="filter-item ">교통</a>
+					<a href="/category/food" class="filter-item ">음식</a>
+				</div>
+                
+                <h2>여행지. Places I Have Visited</h2>
 				<ul class="projects-list">
                     
-                        <li>
+                        <li data-location="" data-title="Aquapineapple">
                             <a href="/aquapineapple/">
                                 <div class="img-wrapper">
                                     <img src="/assets/images/projects/redpineapple/004.png" alt="Aqua Pineapple">
@@ -48,7 +61,7 @@
                             </a>
                         </li>
                     
-                        <li>
+                        <li data-location="" data-title="Aquapineapple copy">
                             <a href="/aquapineapple-copy/">
                                 <div class="img-wrapper">
                                     <img src="/assets/images/projects/redpineapple/004.png" alt="Aqua Pineapple">
@@ -58,7 +71,7 @@
                             </a>
                         </li>
                     
-                        <li>
+                        <li data-location="" data-title="Aquapineapple copy 2">
                             <a href="/aquapineapple-copy-2/">
                                 <div class="img-wrapper">
                                     <img src="/assets/images/projects/redpineapple/004.png" alt="Aqua Pineapple">
@@ -68,7 +81,7 @@
                             </a>
                         </li>
                     
-                        <li>
+                        <li data-location="" data-title="Greenpineapple">
                             <a href="/greenpineapple/">
                                 <div class="img-wrapper">
                                     <img src="/assets/images/projects/redpineapple/003.png" alt="Green Pineapple">
@@ -78,7 +91,7 @@
                             </a>
                         </li>
                     
-                        <li>
+                        <li data-location="" data-title="Greenpineapple copy">
                             <a href="/greenpineapple-copy/">
                                 <div class="img-wrapper">
                                     <img src="/assets/images/projects/redpineapple/003.png" alt="Green Pineapple">
@@ -88,7 +101,7 @@
                             </a>
                         </li>
                     
-                        <li>
+                        <li data-location="" data-title="Greenpineapple copy 2">
                             <a href="/greenpineapple-copy-2/">
                                 <div class="img-wrapper">
                                     <img src="/assets/images/projects/redpineapple/003.png" alt="Green Pineapple">
@@ -112,6 +125,10 @@
                     
                         
                             <a href="/page/2/">2</a>
+                        
+                    
+                        
+                            <a href="/page/3/">3</a>
                         
                     
 
@@ -141,5 +158,6 @@
 </footer>
 	<script src="/assets/scripts/vendor/scrollreveal.min.js"></script>
 	<script src="/assets/scripts/home.js"></script>
+    <script src="/assets/scripts/search.js"></script>
 </body>
 </html>
