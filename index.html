@@ -20,20 +20,47 @@
 		</section>
 		<section class="projects">
 			<div class="container">
-				<h2>Projects I have worked on.</h2>
+				<h2>여행지. Places I Have Visited</h2>
 				<ul class="projects-list">
-					{% for item in site.categories.projects reversed %}
-						<li>
-							<a href="{{ item.url | prepend: site.baseurl }}">
-								<div class="img-wrapper">
-									<img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
-								</div>
-								<span class="h2">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-							</a>
-						</li>
-					{% endfor %}
+                    {% for item in paginator.posts %}
+                        <li>
+                            <a href="{{ item.url | prepend: site.baseurl }}">
+                                <div class="img-wrapper">
+                                    <img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
+                                </div>
+                                <span class="h2">{{ item.project.type }}</span>
+                                <h3>{{ item.project.title }}</h3>
+                            </a>
+                        </li>
+                    {% endfor %}
 				</ul>
+				<!-- 페이지네이션 추가 -->
+				<!-- 페이지네이션 -->
+                {% if paginator.total_pages > 1 %}
+                <div class="pagination">
+                    {% if paginator.previous_page %}
+                        <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">
+                            &laquo; Previous
+                        </a>
+                    {% endif %}
+
+                    {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                            <span class="current">{{ page }}</span>
+                        {% elsif page == 1 %}
+                            <a href="{{ '/' | relative_url }}">{{ page }}</a>
+                        {% else %}
+                            <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if paginator.next_page %}
+                        <a href="{{ paginator.next_page_path | relative_url }}" class="next">
+                            Next &raquo;
+                        </a>
+                    {% endif %}
+                </div>
+                {% endif %}
 			</div>
 		</section>
 	</main>

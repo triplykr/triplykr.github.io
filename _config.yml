@@ -1,13 +1,11 @@
 # User config
-author: "Pineapple"
+author: "Triply.kr"
 tagline: "Pineapple Certfied Jekyll Theme"
-description: "In 1493, explorer Christopher Columbus found pineapples on Guadeloupe Island in the Caribbean. Pineapple on pizza soon followed..."
+description: "여행 블로거<br/>✈️ 여행지 정보 공유 | 여행후기<br/>✨️ #여행 #여행스타그램 #여행블로거"
 keywords: "Pineapple, Pineapple Pizza, Pineapple House"
 
-email: "pineapple@example.com"
-linkedin: "https://www.linkedin.com/"
-twitter: "https://twitter.com/"
-github: "https://github.com/"
+email: "triply.kr@gmail.com"
+instagram: "https://www.instagram.com/triplykr/"
 
 # Site config
 baseurl: ""
@@ -42,8 +40,8 @@ plugins:
   - jemoji #Uncomment this to allow emoji in your post
   - jekyll-spaceship
 
-# Permalinks
-paginate:       5
+paginate: 6  # 한 페이지당 프로젝트 수
+paginate_path: "/page/:num/"
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock ]
