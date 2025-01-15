@@ -1,7 +1,8 @@
-@import "trip/variables";
-@import "trip/mixins";
-@import "trip/normalize";
-@import "trip/fonts";
-@import "trip/core";
-@import "trip/layout";
-@import "trip/syntax";
+@use 'trip/variables' as *;
+@use 'trip/mixins' as *;
+
+@use 'trip/core';
+@use 'trip/fonts';
+@use 'trip/layout';
+@use 'trip/normalize';
+@use 'trip/syntax';

@@ -1,5 +1,5 @@
-@use "./variables" as *;
-@use "../_scss/mixins" as *;
+@use 'mixins' as *; 
+@use 'variables' as *; 
 
 .container {
 	display: block;
