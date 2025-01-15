@@ -31,8 +31,8 @@ collections:
     output: true
 
 include:
-  - _scss
   - assets
+  - assets/_scss
 
 # Gems
 plugins:
