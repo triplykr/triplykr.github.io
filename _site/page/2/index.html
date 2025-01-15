@@ -18,12 +18,16 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
+<body class="home-page">
 	<header class="header">
 	<div class="container">
 		<h1 class="logo">
 			<a title="Triply.kr" href="/">Triply.kr</a>
 		</h1>
+		<!-- 검색 필드 추가 -->
+		<div class="search-container">
+			<input type="text" id="searchInput" class="search-input" placeholder="여행지 검색...">
+		</div>
 	</div>
 </header>
 	<main class="content">
@@ -35,17 +39,13 @@
 		</section>
 		<section class="projects">
 			<div class="container">
-                <!-- 검색 필드 추가 -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-input" placeholder="여행지 검색...">
-                </div>
                 <!-- 필터 네비게이션 추가 -->
 				<div class="filter-nav">
-                    <a href="/" class="filter-item active">전체</a>
-					<a href="/category/tourist" class="filter-item ">관광지</a>
-					<a href="/category/accommodation" class="filter-item ">숙소</a>
-					<a href="/category/transportation" class="filter-item ">교통</a>
-					<a href="/category/food" class="filter-item ">음식</a>
+                    <a href="/" class="filter-item active" data-category="all">전체</a>
+					<a href="/category/tourist" class="filter-item " data-category="tourist">관광지</a>
+					<a href="/category/accommodation" class="filter-item " data-category="accommodation">숙소</a>
+					<a href="/category/transportation" class="filter-item " data-category="transportation">교통</a>
+					<a href="/category/food" class="filter-item " data-category="food">음식</a>
 				</div>
                 
                 <h2>여행지. Places I Have Visited</h2>

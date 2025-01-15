@@ -33,7 +33,7 @@ category: transportation
                 <h2>교통. Places I Have Visited</h2>
                 <ul class="projects-list">
                     {% for item in site.categories.transportation %}
-                        <li>
+                        <li data-location="{{ item.location }}" data-title="{{ item.title }}">
                             <a href="{{ item.url | prepend: site.baseurl }}">
                                 <div class="img-wrapper">
                                     <img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
@@ -50,5 +50,6 @@ category: transportation
     {% include footer.html %}
     <script src="{{ "/assets/scripts/vendor/scrollreveal.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/scripts/home.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/scripts/search.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>

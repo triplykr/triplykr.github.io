@@ -12,8 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
         projectsList.innerHTML = originalHTML;
         
         // 모든 아이템에 대해 기본 스타일 적용
-        const items = projectsList.querySelectorAll('li>a');
+        const items = projectsList.querySelectorAll('li');
         items.forEach(item => {
+            item.style.visibility = 'visible';
+            item.style.opacity = '1';
+            item.style.transform = 'none';
+        });
+ 
+        // 모든 아이템에 대해 기본 스타일 적용
+        const a_items = projectsList.querySelectorAll('li>a');
+        a_items.forEach(item => {
             item.style.visibility = 'visible';
             item.style.opacity = '1';
             item.style.transform = 'none';

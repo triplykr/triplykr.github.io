@@ -9,10 +9,10 @@
 	@include clearfix;
 }
 
-.header {
-	background: $color-white;
-	padding: 3rem 0;
-}
+// .																																												 {
+// 	background: $color-white;
+// 	padding: 3rem 0;
+// }
 
 .logo {
 	float: left;
@@ -131,7 +131,7 @@
 	top: 0;
 
 	@media (min-width: $breakpoint-medium) {
-		margin-top: -21rem;
+		margin-top: -10rem;
 
 		.article-wrapper {
 			position: absolute;
@@ -528,33 +528,66 @@ aside li {
     }
 }
 
+.header {
+    background: $color-white;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;  // 추가
+    top: 0;           // 추가
+    z-index: 1000;    // 추가
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); // 추가
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .logo {
+        float: none;
+        flex-shrink: 0;
+    }
+}
+
 .search-container {
+    flex-grow: 1; // 남은 공간 차지
+    max-width: 600px; // 최대 너비 설정
     position: relative;
-    margin: 2rem 0 4rem;
-    text-align: center;
+    margin: 0; // 기존 마진 제거
+	
+	// post 페이지에서는 검색창 숨기기
+	.post-page & {
+		display: none;
+	}
     
     .search-input {
         width: 100%;
-        max-width: 500px;
-        padding: 1rem 1.5rem;
+        padding: 0.8rem 1.5rem;
         padding-right: 3rem;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(0, 0, 0, 0.08);
         border-radius: 50px;
         font-size: 1rem;
         transition: all 0.3s ease;
+        background: #f8f9fa;
+        
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
         
         &:focus {
             outline: none;
-            border-color: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 0, 0, 0.2);
+            background: $color-white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
     }
 
     .search-clear {
         position: absolute;
-        right: 50%;
+        right: 1rem;
         top: 50%;
-        transform: translate(calc(250px - 2.5rem), -50%);
+        transform: translateY(-50%);
         background: none;
         border: none;
         color: rgba(0, 0, 0, 0.4);
@@ -566,5 +599,42 @@ aside li {
         &:hover {
             color: rgba(0, 0, 0, 0.7);
         }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        .search-input {
+            font-size: 0.9rem;
+            padding: 0.7rem 1.2rem;
+        }
+        
+        .search-clear {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// 모바일 대응
+@media (max-width: $breakpoint-small) {
+    .header {
+        padding: 1.5rem 0;
+
+        .container {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: none;
+        }
+    }
+}
+
+// 기존 여백 조정
+.content {
+    padding-top: 3rem; // 상단 여백 조정
+
+    @media (min-width: $breakpoint-medium) {
+        padding-top: 5rem;
     }
 }
