@@ -11,11 +11,6 @@ instagram: "https://www.instagram.com/triplykr/"
 baseurl: ""  # 슬래시 포함
 url: "https://triply.kr"
 
-# Assets
-sass:
-  sass_dir: assets/css
-  style: compressed
-
 # Build settings
 markdown:       kramdown
 highlighter:    rouge
@@ -30,9 +25,9 @@ collections:
   seminars:
     output: true
 
-include:
-  - assets
-  - assets/_scss
+sass:
+  sass_dir:     _sass
+  style:        compressed
 
 # Gems
 plugins:
