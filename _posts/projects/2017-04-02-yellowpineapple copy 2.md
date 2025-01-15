@@ -6,6 +6,7 @@ category: projects
 meta:
   keywords: "Jekyll, Pineapple"
 
+date: 2024-02-15
 project:
   title: "Yellow Pineapple"
   type: "호텔"

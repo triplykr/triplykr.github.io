@@ -7,6 +7,7 @@ location: "Bali, Indonesia"  # 위치 정보 추가
 meta:
   keywords: "Jekyll, Pineapple"
 
+date: 2024-02-15
 project:
   title: "Red Pineapple"
   type: "관광지"

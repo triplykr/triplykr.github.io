@@ -7,6 +7,7 @@ meta:
 
 categories: [tourist]  # 또는 accommodation, transportation
 
+date: 2024-02-15
 project:
   title: "Red Pineapple"
   location: "Bali, Indonesia"  # 위치 정보 추가

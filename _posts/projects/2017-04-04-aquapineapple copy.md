@@ -6,6 +6,7 @@ category: projects
 meta:
   keywords: "Jekyll, Pineapple"
 
+date: 2024-02-15
 project:
   title: "Aqua Pineapple"
   type: "숙소"
