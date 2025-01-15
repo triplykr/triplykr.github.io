@@ -1,0 +1,53 @@
+# User config
+author: "Pineapple"
+tagline: "Pineapple Certfied Jekyll Theme"
+description: "In 1493, explorer Christopher Columbus found pineapples on Guadeloupe Island in the Caribbean. Pineapple on pizza soon followed..."
+keywords: "Pineapple, Pineapple Pizza, Pineapple House"
+
+email: "pineapple@example.com"
+linkedin: "https://www.linkedin.com/"
+twitter: "https://twitter.com/"
+github: "https://github.com/"
+
+# Site config
+baseurl: ""
+
+# Assets
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Build settings
+markdown:       kramdown
+highlighter:    rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+timezone: UTC
+
+# 추가 포스트 설정
+collections:
+  seminars:
+    output: true
+
+include:
+  - _pages
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jemoji #Uncomment this to allow emoji in your post
+  - jekyll-spaceship
+
+# Permalinks
+paginate:       5
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock ]
+
+host: "0.0.0.0"
+livereload: true
+reload_port: 5678
