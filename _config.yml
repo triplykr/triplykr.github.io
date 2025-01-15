@@ -8,7 +8,7 @@ email: "triply.kr@gmail.com"
 instagram: "https://www.instagram.com/triplykr/"
 
 # Site config
-baseurl: "/"  # 슬래시 포함
+baseurl: ""  # 슬래시 포함
 url: "https://triply.kr"
 
 # Assets

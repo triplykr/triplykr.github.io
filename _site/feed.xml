@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title></title>
-        <description>여행 블로거&lt;br/&gt;✈️ 여행지 정보 공유 | 여행후기&lt;br/&gt;✨️ #여행 #여행스타그램 #여행블로거</description>      
+        <description>여행 블로거&lt;br/&gt;✨️ #여행 #여행스타그램 #여행블로거</description>      
         <link>http://0.0.0.0:4000</link>
         <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
         <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
