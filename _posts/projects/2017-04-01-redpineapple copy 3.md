@@ -1,7 +1,7 @@
 ---
 layout: project
 permalink: /:title/
-category: projects
+category: food
 
 meta:
   keywords: "Jekyll, Pineapple"

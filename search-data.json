@@ -3,13 +3,15 @@ layout: null
 ---
 {
   "posts": [
-    {% for post in site.categories.projects %}
+    {% assign projects = site.posts | where: "layout", "project" %}
+    {% for post in projects %}
     {
-      "title": "{{ post.project.title | escape }}",
-      "location": "{{ post.project.location | escape }}",
-      "type": "{{ post.project.type | escape }}",
-      "url": "{{ post.project.url | prepend: site.baseurl }}",
-      "logo": "{{ post.project.logo | prepend: site.baseurl }}"
+      "category": "{{ post.category }}",
+      "location": "{{ post.project.location }}",
+      "title": "{{ post.project.title }}",
+      "type": "{{ post.project.type }}",
+      "url": "{{ post.url | relative_url }}",
+      "logo": "{{ post.project.logo | relative_url }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

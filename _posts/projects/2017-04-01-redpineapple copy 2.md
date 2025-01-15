@@ -1,7 +1,7 @@
 ---
 layout: project
 permalink: /:title/
-category: projects
+category: tourist
 
 meta:
   keywords: "Jekyll, Pineapple"
@@ -10,6 +10,7 @@ date: 2024-02-15
 project:
   title: "Red Pineapple"
   type: "관광지"
+  location: "방콕"
   url: "https://github.com/arnolds/pineapple"
   logo: "/assets/images/projects/redpineapple/001.png"
   tech: "HTML, CSS, Boostrap, Sass, JavaScript, jQuery, Jekyll"

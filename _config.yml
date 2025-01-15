@@ -38,8 +38,8 @@ plugins:
   - jemoji
   - jekyll-spaceship
 
-paginate: 6  # 한 페이지당 프로젝트 수
-paginate_path: "/page/:num/"
+# paginate: 6  # 한 페이지당 프로젝트 수
+# paginate_path: "/page/:num/"
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock ]

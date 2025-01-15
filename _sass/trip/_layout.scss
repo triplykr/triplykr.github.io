@@ -638,3 +638,37 @@ aside li {
         padding-top: 5rem;
     }
 }
+
+
+.search-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.remove-step {
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.remove-step:hover {
+    color: #374151;
+}
+
+.location-info {
+    margin-top: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}

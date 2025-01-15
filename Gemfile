@@ -7,5 +7,5 @@ gem "jekyll-spaceship", group: :jekyll_plugins
 
 # 아래 gem들 추가 필요
 gem "jekyll-feed"
-gem "jekyll-paginate"
+# gem "jekyll-paginate"
 gem "jekyll-seo-tag"

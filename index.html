@@ -3,78 +3,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ site.author }} / {{ site.tagline }}</title>
-	<meta name="author" content="{{ site.author }}">
-	<meta name="description" content="{{ site.description }}">
-	<meta name="keywords" content="{{ site.keywords }}">
-	{% include head.html %}
+    <title>{{ site.author }} / {{ site.tagline }}</title>
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    {% include head.html %}
 </head>
 <body class="home-page">
-	{% include header.html %}
-	<main class="content">
-		<section class="intro">
-			<div class="container">
-				<h2>About me.</h2>
-				<p>{{ site.description }}</p>
-			</div>
-		</section>
-		<section class="projects">
-			<div class="container">
-                <!-- 필터 네비게이션 추가 -->
-				<div class="filter-nav">
-                    <a href="/" class="filter-item {% if page.category == nil %}active{% endif %}"  data-category="all">전체</a>
-					<a href="/category/tourist" class="filter-item {% if page.category == 'tourist' %}active{% endif %}" data-category="tourist">관광지</a>
-					<a href="/category/accommodation" class="filter-item {% if page.category == 'accommodation' %}active{% endif %}" data-category="accommodation">숙소</a>
-					<a href="/category/transportation" class="filter-item {% if page.category == 'transportation' %}active{% endif %}" data-category="transportation">교통</a>
-					<a href="/category/food" class="filter-item {% if page.category == 'food' %}active{% endif %}" data-category="food">음식</a>
-				</div>
+    {% include header.html %}
+    <main class="content">
+        <section class="intro">
+            <div class="container">
+                <h2>About me.</h2>
+                <p>{{ site.description }}</p>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <div class="filter-nav">
+                    <a href="/" class="filter-item {% if page.category == nil %}active{% endif %}" data-category="all">전체</a>
+                    <a href="/category/tourist" class="filter-item {% if page.category == 'tourist' %}active{% endif %}" data-category="tourist">관광지</a>
+                    <a href="/category/accommodation" class="filter-item {% if page.category == 'accommodation' %}active{% endif %}" data-category="accommodation">숙소</a>
+                    <a href="/category/transportation" class="filter-item {% if page.category == 'transportation' %}active{% endif %}" data-category="transportation">교통</a>
+                    <a href="/category/food" class="filter-item {% if page.category == 'food' %}active{% endif %}" data-category="food">음식</a>
+                </div>
                 
                 <h2>여행지. Places I Have Visited</h2>
-				<ul class="projects-list">
-                    {% for item in paginator.posts %}
+                <ul class="projects-list">
+                    {% for item in site.posts %}
                         <li data-location="{{ item.location }}" data-title="{{ item.title }}">
-                            <a href="{{ item.url | prepend: site.baseurl }}">
+                            <a href="{{ item.url }}">
                                 <div class="img-wrapper">
-                                    <img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
+                                    <img src="{{ item.project.logo }}" alt="{{ item.project.title }}" />
                                 </div>
                                 <span class="h2">{{ item.project.type }}</span>
                                 <h3>{{ item.project.title }}</h3>
                             </a>
                         </li>
                     {% endfor %}
-				</ul>
-				<!-- 페이지네이션 추가 -->
-				<!-- 페이지네이션 -->
-                {% if paginator.total_pages > 1 %}
-                <div class="pagination">
-                    {% if paginator.previous_page %}
-                        <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">
-                            &laquo; Previous
-                        </a>
-                    {% endif %}
-
-                    {% for page in (1..paginator.total_pages) %}
-                        {% if page == paginator.page %}
-                            <span class="current">{{ page }}</span>
-                        {% elsif page == 1 %}
-                            <a href="{{ '/' | relative_url }}">{{ page }}</a>
-                        {% else %}
-                            <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if paginator.next_page %}
-                        <a href="{{ paginator.next_page_path | relative_url }}" class="next">
-                            Next &raquo;
-                        </a>
-                    {% endif %}
-                </div>
-                {% endif %}
-			</div>
-		</section>
-	</main>
-	{% include footer.html %}
-	<script src="{{ "/assets/scripts/home.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/assets/scripts/search.js" | prepend: site.baseurl }}"></script>
+                </ul>
+            </div>
+        </section>
+    </main>
+    {% include footer.html %}
+    <script src="/assets/scripts/home.js"></script>
+    <script src="/assets/scripts/search.js"></script>
 </body>
 </html>

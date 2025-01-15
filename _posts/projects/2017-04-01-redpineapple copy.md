@@ -1,7 +1,7 @@
 ---
 layout: project
 permalink: /:title/
-category: projects
+category: accommodation
 
 meta:
   keywords: "Jekyll, Pineapple"
