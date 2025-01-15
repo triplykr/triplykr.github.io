@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'github-pages', group: :jekyll_plugins
+
 gem "jekyll", "~> 4.3.2"
 gem "jekyll-feed", "~> 0.17"
 gem "jekyll-paginate", "~> 1.1.0"
