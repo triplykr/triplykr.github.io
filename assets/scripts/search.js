@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 데이터 로딩
     console.log('=== 데이터 로딩 시작 ===');
-    fetch('/search-data.json')
+    fetch('/assets/json/search-data.json')
         .then(response => {
             console.log('응답 상태:', response.status);
             if (!response.ok) {
