@@ -2,6 +2,7 @@
 layout: project
 permalink: /:title/
 category: tourist
+image: "/assets/images/projects/redpineapple/001.png"
 
 meta:
   keywords: "Jekyll, Pineapple"

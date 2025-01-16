@@ -1,11 +1,16 @@
 # User config
-author: "Triply.kr"
-tagline: "Pineapple Certfied Jekyll Theme"
-description: "여행 블로거<br/>✨️ #여행 #여행스타그램 #여행블로거"
+title: "Triply.kr"
+description: "여행 블로거"
 keywords: "여행지 정보 공유, 여행후기"
 
+# User info
+author:
+  name: "트립플리"
+  pic: "/assets/images/triply.png"
+
+# Social
+instagram: "triplykr"
 email: "triply.kr@gmail.com"
-instagram: "https://www.instagram.com/triplykr/"
 
 # Site config
 baseurl: ""  # 슬래시 포함
@@ -29,17 +34,12 @@ sass:
   sass_dir: _sass
   style: compressed
 
-  
 # Gems
 plugins:
   - jekyll-feed
-  # - jekyll-paginate
   - jekyll-seo-tag
   - jemoji
   - jekyll-spaceship
-
-# paginate: 6  # 한 페이지당 프로젝트 수
-# paginate_path: "/page/:num/"
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock ]

@@ -3,10 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ site.author }} / {{ site.tagline }}</title>
-    <meta name="author" content="{{ site.author }}">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="{{ site.keywords }}">
     {% include head.html %}
 </head>
 <body class="home-page">
@@ -14,8 +10,12 @@
     <main class="content">
         <section class="intro">
             <div class="container">
-                <h2>About me.</h2>
-                <p>{{ site.description }}</p>
+                <!-- <h2>About me.</h2> -->
+                <!-- <p class="sub">{{ site.description }}</p> -->
+                <p class="logo">
+                    <img src="{{site.author.pic}}" alt="{{site.title}}" />
+                </p>
+                <h2>{{ site.keywords }}</h2>
             </div>
         </section>
         <section class="projects">

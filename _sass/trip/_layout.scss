@@ -66,6 +66,10 @@
 	padding: 0 0 5rem;
 }
 
+.projects{
+
+}
+
 .intro {
 	@media (min-width: $breakpoint-medium) {
 		p {
@@ -73,6 +77,29 @@
 			max-width: 66.66666%;
 		}
 	}
+
+    @media (max-width: $breakpoint-small) {
+        p.logo img{
+            width: 100px !important;  /* 로고 크기 증가 */
+            height: 100px !important;
+        }
+      }
+
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    p.logo img{
+        width: 150px;  /* 로고 크기 증가 */
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease;      
+    }
 }
 
 .projects-list {
@@ -101,6 +128,14 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        h3 {
+            margin-top: -10px;
+        }
+        span.h2{
+            text-align: right;
+            margin: 5px;
+        }
     }
 
     // 검색 결과 없을 때의 스타일
@@ -114,12 +149,12 @@
             
             p {
                 margin: 0;
-                font-size: 1.1rem;
+                font-size: 2.5rem;
             }
 
             .search-suggestion {
                 margin-top: 0.5rem;
-                font-size: 0.9rem;
+                font-size: 1.2rem;
             }
         }
     }
@@ -151,7 +186,7 @@
 
 		@media (min-width: $breakpoint-medium) {
 			position: sticky; // absolute에서 sticky로 변경
-			top: 2rem; // 상단에서 얼마나 떨어질지 설정
+			top: 10rem; // 상단에서 얼마나 떨어질지 설정
 			float: right;
 			right: 5%;
 			width: 40%;
@@ -330,6 +365,9 @@
 	position: fixed;
 	right: 0;
 	z-index: -1;
+    a {
+        color: $color-silver-chalice;
+    }
 }
 
 .contact,
@@ -672,3 +710,80 @@ aside li {
     color: #6b7280;
     font-size: 0.875rem;
 }
+
+main .intro {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 2rem;
+
+        &.sub {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.about-body {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;  /* 상하 여백 증가 */
+  }
+  
+  .contact-list {
+    display: flex;
+    align-items: center;
+    gap: 3rem;  /* 아이템 간격 증가 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-list .logo img {
+    width: 80px;  /* 로고 크기 증가 */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-list .logo img:hover {
+    transform: scale(1.1);  /* 호버 시 약간 확대 */
+  }
+  
+  .contact-list a {
+    color: $color-silver-chalice;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;  /* 아이콘 중앙 정렬을 위해 */
+    align-items: center;
+  }
+  
+  .contact-list a:hover {
+    color: #007bff;
+  }
+  
+  /* SNS 아이콘 크기 증가 */
+  .contact-list .far,
+  .contact-list .fab {
+    font-size: 2.5rem;  /* 아이콘 크기 증가 */
+  }
+  
+  /* 모바일 반응형 */
+  @media (max-width: 768px) {
+    .contact-list {
+      gap: 2rem;
+    }
+    
+    .contact-list .logo img {
+      width: 60px;  /* 모바일에서도 적당히 큰 크기 유지 */
+      height: 60px;
+    }
+    
+    .contact-list .far,
+    .contact-list .fab {
+      font-size: 2rem;  /* 모바일에서도 충분히 큰 크기 유지 */
+    }
+  }

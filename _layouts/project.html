@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ site.author }} / {{ page.project.title }}</title>
-	<meta name="author" content="{{ site.author }}">
+	<title>{{ site.author.name }} / {{ page.title }}</title>
+	<meta name="author" content="{{ site.author.name }}">
 	<meta name="description" content="{{ page.content | strip_html | strip_newlines }}">
 	<meta name="keywords" content="{{ page.meta.keywords }}">
 	{% include head.html %}
@@ -13,20 +13,14 @@
 		<section class="project">
 			<div class="container">
 				<article>
-					<span class="h2">Project Title</span>
+					<span class="h2">Title</span>
 					<h1>
 						<a href="{{ page.project.url }}" target="_blank" title="{{ page.project.title }}" rel="nofollow">{{ page.project.title }}</a>
 					</h1>
-					<span class="h2">Role</span>
+					<span class="h2">Information</span>
 					{{ page.content }}
-					<div class="project-meta">
-						<span class="h2">Technologies</span>
-						<p>{{ page.project.tech }}</p>
-						<span class="h2">Agency</span>
-						<p><a title="{{ page.agency.title }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.agency.title }}</a></p>
-						<span class="h2">Year</span>
-						<p>{{ page.agency.year }}</p>
-					</div>
+					<span class="h2">Address</span>
+					<p><a title="{{ page.agency.title }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.agency.title }}</a></p>
 				</article>
 				<aside>
 					<ul>
@@ -39,7 +33,7 @@
 				</aside>
 			</div>
 		</section>
-		<section class="project-navigation">
+		<!-- <section class="project-navigation">
 			<div class="container">
 				{% if page.previous and page.previous.category contains "projects" %}
 				<a title="Previous {{ page.previous.project.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
@@ -54,7 +48,7 @@
 				</a>
 				{% endif %}
 			</div>
-		</section>
+		</section> -->
 	</main>
 	{% include footer.html %}
 	<script src="{{ "/assets/scripts/project.js" | prepend: site.baseurl }}"></script>
