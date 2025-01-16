@@ -605,7 +605,7 @@ aside li {
         padding-right: 3rem;
         border: 2px solid rgba(0, 0, 0, 0.08);
         border-radius: 50px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         transition: all 0.3s ease;
         background: #f8f9fa;
         
@@ -641,7 +641,7 @@ aside li {
 
     @media (max-width: $breakpoint-small) {
         .search-input {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             padding: 0.7rem 1.2rem;
         }
         
