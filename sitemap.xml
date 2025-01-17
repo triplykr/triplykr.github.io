@@ -1,0 +1,35 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 블로그 포스트 URL -->
+  {% for post in site.posts %}
+    {% assign days_since_update = site.time | date: "%s" | minus: post.date | divided_by: 86400 %}
+    <url>
+      <loc>{{ site.url }}{{ post.url | uri_escape }}</loc>
+      <lastmod>{{ post.upd_date | default: post.date | date_to_xmlschema }}</lastmod>
+      
+      {% if days_since_update <= 7 %}
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+      {% elsif days_since_update <= 30 %}
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      {% else %}
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      {% endif %}
+    </url>
+  {% endfor %}
+
+  <!-- RSS 피드 -->
+  <url>
+    <loc>{{ site.url }}/feed.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>
