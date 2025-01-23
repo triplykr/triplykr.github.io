@@ -8,19 +8,28 @@ body {
 	background: $color-white;
 	color: $color-black;
 	font-family: $font-poppins;
-	font-size: 1.8em;
-	line-height: 1.6;
-	font-weight: 600;
+	// font-size: 1.8em;
+	line-height: 1.5;
+	// font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 }
 
 h1,
 .h1 {
 	color: $color-black;
-	font-size: 2.7rem;
+	font-size: 1.7rem;
+	font-weight: 600;
+	// line-height: 1;
+	margin: 0;
+}
+
+h1.title {
+	color: $color-black;
+	font-family: $font-poppins;
+	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 1;
-	margin: 0;
+	margin: 0 0 1rem;
 }
 
 h2,
@@ -34,16 +43,6 @@ h2,
     line-height: 1;
     margin: 0 0 1rem;
     text-transform: uppercase;
-}
-
-h3,
-.h3 {
-	color: $color-black;
-	font-family: $font-poppins;
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1;
-    margin: 0;
 }
 
 p {
@@ -169,4 +168,58 @@ blockquote {
 
 pre {
 	margin: 0 0 3rem;
+}
+
+
+// 홈페이지
+
+body.home-page section.projects {
+	.location {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+
+		.h2 {
+			font-size: 0.85rem;
+			margin: 0;
+		}
+	}
+}
+
+// 본문
+article {
+
+	.agency {
+		display: flex;
+		justify-content: start;
+		margin: 1rem 0 3rem;
+
+		img.agency-logo {
+			display: block;
+			height: 64px;
+			width: auto;
+		}
+	}
+
+
+	ul {
+		list-style-type: inherit;
+		padding-left: 25px;
+		
+		li {
+			margin: 0 0 0.4rem !important;
+		}
+	}
+
+	
+	h3,
+	.h3 {
+		color: $color-black;
+		font-family: $font-poppins;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1;
+		margin-top: 30px;
+	}
 }

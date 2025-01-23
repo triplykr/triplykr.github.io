@@ -36,7 +36,10 @@
                                 <div class="img-wrapper">
                                     <img src="{{ item.project.logo }}" alt="{{ item.project.title }}" />
                                 </div>
-                                <span class="h2">{{ item.project.type }}</span>
+                                <div class="location">
+                                    <span class="h2">{{ item.project.location }} > {{ item.project.city }}</span>
+                                    <span class="h2">{{ item.project.type }}</span>
+                                </div>
                                 <h3>{{ item.project.title }}</h3>
                             </a>
                         </li>

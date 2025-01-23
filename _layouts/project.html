@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ site.author.name }} / {{ page.title }}</title>
+	<title>{{ site.title }} / {{ page.title }}</title>
 	<meta name="author" content="{{ site.author.name }}">
 	<meta name="description" content="{{ page.content | strip_html | strip_newlines }}">
 	<meta name="keywords" content="{{ page.meta.keywords }}">
@@ -12,16 +12,31 @@
 	<main class="post-content">
 		<section class="project">
 			<div class="container">
+				<!-- 리뷰 본문 -->
 				<article>
 					<span class="h2">Title</span>
-					<h1>
+					<h1 class="title">
 						<a href="{{ page.project.url }}" target="_blank" title="{{ page.project.title }}" rel="nofollow">{{ page.project.title }}</a>
 					</h1>
+					
+					<!-- 주소 -->
+					<span class="h2">Address</span>
+					<p><a title="{{ page.agency.name }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.project.address }}</a></p>
+					
+					<!-- 플랫폼 -->
+					<span class="h2">예약 플랫폼</span>
+					<p>
+						<div class="agency">
+							<img class="agency-logo" src="/assets/images/platform/{{ page.agency.type }}.png" alt="{{ page.agency.name }}" />
+							<!-- <a title="{{ page.agency.name }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.agency.name }}</a> -->
+						</div>
+					</p>
+					
+					<!-- 본문 내용 -->
 					<span class="h2">Information</span>
 					{{ page.content }}
-					<span class="h2">Address</span>
-					<p><a title="{{ page.agency.title }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.agency.title }}</a></p>
 				</article>
+				<!-- 사진 -->
 				<aside>
 					<ul>
 						{% for image in page.images %}

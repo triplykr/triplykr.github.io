@@ -92,7 +92,7 @@
         align-items: center;
         gap: 2.5rem;
     }
-
+    
     p.logo img{
         width: 150px;  /* 로고 크기 증가 */
         height: 150px;
@@ -178,7 +178,7 @@
 	}
 
 	.container {
-		max-width: 800px;
+		max-width: 1200px;
 	}
 
 	article {
@@ -189,7 +189,7 @@
 			top: 10rem; // 상단에서 얼마나 떨어질지 설정
 			float: right;
 			right: 5%;
-			width: 40%;
+			width: 50%;
 		}
 	}
 
@@ -203,8 +203,21 @@
 
 		@media (min-width: $breakpoint-medium) {
 			float: left;
-			width: 55%;
+			width: 45%;
 		}
+        li {
+            display: flex;
+            justify-content: end;
+
+            @media (min-width: $breakpoint-small) {
+                justify-content: center ;
+            }
+            
+            img {
+                max-width: 500px;
+            }
+        }
+
 	}
 
 	.project-meta {
@@ -226,7 +239,7 @@
 
 	h1 {
 		a {
-			text-decoration: underline;
+			// text-decoration: underline;
 		}
 	}
 
