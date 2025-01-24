@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="img-wrapper">
                             <img src="${post.logo}" alt="${post.title}" />
                         </div>
-                        <span class="h2">${post.type}</span>
+                        <div class="location">
+                            <span class="h2">${post.location} > ${post.city}</span>
+                            <span class="h2">${ post.type }</span>
+                        </div>
                         <h3>${post.title}</h3>
                     </a>
                 </li>

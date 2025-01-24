@@ -16,18 +16,24 @@
 				<article>
 					<span class="h2">Title</span>
 					<h1 class="title">
-						<a href="{{ page.project.url }}" target="_blank" title="{{ page.project.title }}" rel="nofollow">{{ page.project.title }}</a>
+						{% if page.project.url %}
+						<a href="{{ page.project.url }}" target="_blank">{{ page.project.title }}</a>
+						{% else %}
+						{{ page.project.title }}
+						{% endif %}
 					</h1>
 					
 					<!-- 주소 -->
 					<span class="h2">Address</span>
-					<p><a title="{{ page.agency.name }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.project.address }}</a></p>
+					<p><a href="{{ page.project.naver_map }}" target="_blank">{{ page.project.address }}</a></p>
 					
 					<!-- 플랫폼 -->
 					<span class="h2">예약 플랫폼</span>
 					<p>
 						<div class="agency">
-							<img class="agency-logo" src="/assets/images/platform/{{ page.agency.type }}.png" alt="{{ page.agency.name }}" />
+							<a class="none" href="{{ page.agency.url }}" target="_blank">
+								<img class="agency-logo" src="/assets/images/platform/{{ page.agency.type }}.png" alt="{{ page.agency.name }}" />
+							</a>
 							<!-- <a title="{{ page.agency.name }}" href="{{ page.agency.url }}" target="_blank" rel="nofollow">{{ page.agency.name }}</a> -->
 						</div>
 					</p>

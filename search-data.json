@@ -8,6 +8,7 @@ layout: null
     {
       "category": "{{ post.category }}",
       "location": "{{ post.project.location }}",
+      "city": "{{ post.project.city }}",
       "title": "{{ post.project.title }}",
       "type": "{{ post.project.type }}",
       "url": "{{ post.url | relative_url }}",
