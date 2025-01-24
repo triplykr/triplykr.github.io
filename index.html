@@ -12,7 +12,7 @@
             <div class="container">
                 <!-- <h2>About me.</h2> -->
                 <!-- <p class="sub">{{ site.description }}</p> -->
-                <p class="logo">
+                <p class="image">
                     <img src="{{site.author.pic}}" alt="{{site.title}}" />
                 </p>
                 <h2>{{ site.keywords }}</h2>
@@ -34,7 +34,7 @@
                         <li data-location="{{ item.location }}" data-title="{{ item.title }}">
                             <a href="{{ item.url }}">
                                 <div class="img-wrapper">
-                                    <img src="{{ item.project.logo }}" alt="{{ item.project.title }}" />
+                                    <img src="{{ item.project.image }}" alt="{{ item.project.title }}" />
                                 </div>
                                 <div class="location">
                                     <span class="h2">{{ item.project.location }} > {{ item.project.city }}</span>

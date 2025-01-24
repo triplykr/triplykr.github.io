@@ -12,7 +12,7 @@ layout: null
       "title": "{{ post.project.title }}",
       "type": "{{ post.project.type }}",
       "url": "{{ post.url | relative_url }}",
-      "logo": "{{ post.project.logo | relative_url }}"
+      "image": "{{ post.project.image | relative_url }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

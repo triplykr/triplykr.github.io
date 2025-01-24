@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li style="visibility: visible; transform: none; opacity: 1">
                     <a href="${post.url}">
                         <div class="img-wrapper">
-                            <img src="${post.logo}" alt="${post.title}" />
+                            <img src="${post.image}" alt="${post.title}" />
                         </div>
                         <div class="location">
                             <span class="h2">${post.location} > ${post.city}</span>

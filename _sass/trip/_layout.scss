@@ -14,7 +14,7 @@
 // 	padding: 3rem 0;
 // }
 
-.logo {
+.image {
 	float: left;
 	font-size: 1.8rem;
 	font-weight: 600;
@@ -26,7 +26,7 @@
 	float: right;
 
 	a {
-		@extend .logo;
+		@extend .image;
 	}
 }
 
@@ -79,7 +79,7 @@
 	}
 
     @media (max-width: $breakpoint-small) {
-        p.logo img{
+        p.image img{
             width: 100px !important;  /* 로고 크기 증가 */
             height: 100px !important;
         }
@@ -93,7 +93,7 @@
         gap: 2.5rem;
     }
     
-    p.logo img{
+    p.image img{
         width: 150px;  /* 로고 크기 증가 */
         height: 150px;
         border-radius: 50%;
@@ -473,6 +473,7 @@ aside li {
     width: 100%;
     aspect-ratio: 1 / 1; // 정사각형 비율 강제
     overflow: hidden; // 이미지가 넘치는 경우 숨김
+    border-radius: 12px;
     
     img {
         width: 100%;
@@ -580,6 +581,7 @@ aside li {
 }
 
 .header {
+    display: flex;
     background: $color-white;
     padding: 3rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -597,7 +599,7 @@ aside li {
         gap: 2rem;
     }
 
-    .logo {
+    .image {
         float: none;
         flex-shrink: 0;
     }
@@ -757,7 +759,7 @@ main .intro {
     margin: 0;
   }
   
-  .contact-list .logo img {
+  .contact-list .image img {
     width: 80px;  /* 로고 크기 증가 */
     height: 80px;
     border-radius: 50%;
@@ -765,7 +767,7 @@ main .intro {
     transition: transform 0.3s ease;
   }
   
-  .contact-list .logo img:hover {
+  .contact-list .image img:hover {
     transform: scale(1.1);  /* 호버 시 약간 확대 */
   }
   
@@ -793,7 +795,7 @@ main .intro {
       gap: 2rem;
     }
     
-    .contact-list .logo img {
+    .contact-list .image img {
       width: 60px;  /* 모바일에서도 적당히 큰 크기 유지 */
       height: 60px;
     }
